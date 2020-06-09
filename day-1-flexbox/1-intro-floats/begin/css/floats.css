@@ -5,39 +5,98 @@ html {
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 body {
-	font-family: Arial, Geneva, sans-serif;
+  background-color: #ffe9e3;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-weight: 300;
+  color: #cc6b5b;
 }
 a {
-	color: #2772B0;
+  color: #cc6b5b;
 }
 .wrapper {
-	width: 97%;
-	max-width: 1200px;
-	margin: 0 auto;
-	float: none;
-	background-color: #fff;
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
 }
 
 div img {
-	width: 100%;
-	max-width: 225px; 
+  width: 100%;
+  max-width: 225px;
+}
+
+.title {
+  font-family: "Domine", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #cc6b5b;
+  margin: 0;
+  padding: 32px 0 16px 0;
+}
+
+.pie-img {
+  border-radius: 6px;
+}
+
+.row-1,
+.row-3 {
+  background-color: rgba(204, 107, 91, 0.2);
+}
+.row-2,
+.row-4 {
+  background-color: rgba(204, 107, 91, 0.15);
 }
 
 /* grid system -- mobile first! */
+[class*="row-"] {
+  margin: 2rem 0;
+  border-radius: 6px;
+  padding-bottom: 32px;
+  display: block;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+[class*="col-"] {
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
+  min-height: 1px;
+  float: left;
+}
 
 /* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
-
+@media only screen and (min-width: 480px) {
+  .col-1-4,
+  .col-1-2 {
+    width: 46%;
+    margin: 0 2%;
+  }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-
+  .col-1-4,
+  .col-1-3 {
+    width: 21%;
+    margin: 0 2%;
+  }
+  .col-3-4 {
+    width: 71%;
+    margin: 0 2%;
+  }
+  .col-full {
+    width: 96%;
+    margin: 0 2%;
+  }
 }
